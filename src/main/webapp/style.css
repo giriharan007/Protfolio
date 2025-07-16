@@ -2,7 +2,9 @@
 
 /* Custom CSS for Giriharan S Portfolio */
 
+
 /* Root Variables */
+
 :root {
     --primary-color: #8b5cf6;
     --secondary-color: #ec4899;
@@ -18,7 +20,9 @@
     --border-color: rgba(139, 92, 246, 0.2);
 }
 
+
 /* Global Styles */
+
 * {
     scroll-behavior: smooth;
 }
@@ -31,7 +35,9 @@ body {
     overflow-x: hidden;
 }
 
+
 /* Scrollbar Styling */
+
 ::-webkit-scrollbar {
     width: 6px;
 }
@@ -49,7 +55,9 @@ body {
     background: rgba(139, 92, 246, 0.7);
 }
 
+
 /* Typography */
+
 .gradient-text {
     background: linear-gradient(135deg, #8b5cf6, #ec4899, #3b82f6);
     -webkit-background-clip: text;
@@ -57,26 +65,76 @@ body {
     background-clip: text;
 }
 
-.text-purple { color: #8b5cf6 !important; }
-.text-pink { color: #ec4899 !important; }
-.text-blue { color: #3b82f6 !important; }
-.text-green { color: #10b981 !important; }
-.text-orange { color: #f97316 !important; }
-.text-yellow { color: #eab308 !important; }
-.text-red { color: #ef4444 !important; }
-.text-teal { color: #14b8a6 !important; }
-.text-cyan { color: #06b6d4 !important; }
-.text-indigo { color: #6366f1 !important; }
-.text-light-gray { color: var(--text-gray) !important; }
+.text-purple {
+    color: #8b5cf6 !important;
+}
+
+.text-pink {
+    color: #ec4899 !important;
+}
+
+.text-blue {
+    color: #3b82f6 !important;
+}
+
+.text-green {
+    color: #10b981 !important;
+}
+
+.text-orange {
+    color: #f97316 !important;
+}
+
+.text-yellow {
+    color: #eab308 !important;
+}
+
+.text-red {
+    color: #ef4444 !important;
+}
+
+.text-teal {
+    color: #14b8a6 !important;
+}
+
+.text-cyan {
+    color: #06b6d4 !important;
+}
+
+.text-indigo {
+    color: #6366f1 !important;
+}
+
+.text-light-gray {
+    color: var(--text-gray) !important;
+}
+
 
 /* Background Colors */
-.bg-purple { background-color: #8b5cf6 !important; }
-.bg-blue { background-color: #3b82f6 !important; }
-.bg-success { background-color: #10b981 !important; }
-.bg-warning { background-color: #f59e0b !important; }
-.bg-info { background-color: #06b6d4 !important; }
+
+.bg-purple {
+    background-color: #8b5cf6 !important;
+}
+
+.bg-blue {
+    background-color: #3b82f6 !important;
+}
+
+.bg-success {
+    background-color: #10b981 !important;
+}
+
+.bg-warning {
+    background-color: #f59e0b !important;
+}
+
+.bg-info {
+    background-color: #06b6d4 !important;
+}
+
 
 /* Navigation */
+
 .navbar {
     background: rgba(15, 15, 26, 0.9) !important;
     backdrop-filter: blur(10px);
@@ -100,7 +158,9 @@ body {
     color: var(--primary-color) !important;
 }
 
+
 /* Hero Section */
+
 .hero-section {
     min-height: 100vh;
     position: relative;
@@ -115,9 +175,19 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: 0;
+    pointer-events: none;
+    /* So it won't block clicks */
 }
 
+.modal {
+    z-index: 1050;
+    /* Ensure modal is above everything */
+}
+
+.modal-backdrop.show {
+    z-index: 1040;
+}
 
 .particle {
     position: absolute;
@@ -151,8 +221,13 @@ body {
 }
 
 @keyframes floating {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
 }
 
 .hero-content {
@@ -228,12 +303,24 @@ body {
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-    40% { transform: translateX(-50%) translateY(-10px); }
-    60% { transform: translateX(-50%) translateY(-5px); }
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
 }
 
+
 /* Buttons */
+
 .btn-primary {
     background: linear-gradient(135deg, #8b5cf6, #ec4899);
     border: none;
@@ -287,7 +374,9 @@ body {
     color: white;
 }
 
+
 /* Glass Cards */
+
 .glass-card {
     background: rgba(139, 92, 246, 0.1);
     backdrop-filter: blur(10px);
@@ -303,7 +392,9 @@ body {
     box-shadow: 0 10px 30px rgba(139, 92, 246, 0.2);
 }
 
+
 /* Icon Boxes */
+
 .icon-box {
     width: 60px;
     height: 60px;
@@ -314,7 +405,8 @@ body {
     font-size: 1.5rem;
 }
 
-.cert-icon, .contact-icon {
+.cert-icon,
+.contact-icon {
     width: 50px;
     height: 50px;
     border-radius: 10px;
@@ -335,20 +427,56 @@ body {
     margin: 0 auto;
 }
 
+
 /* Gradient Backgrounds */
-.bg-gradient-purple { background: linear-gradient(135deg, #8b5cf6, #a855f7); }
-.bg-gradient-blue { background: linear-gradient(135deg, #3b82f6, #6366f1); }
-.bg-gradient-green { background: linear-gradient(135deg, #10b981, #059669); }
-.bg-gradient-orange { background: linear-gradient(135deg, #f97316, #ea580c); }
-.bg-gradient-yellow { background: linear-gradient(135deg, #eab308, #ca8a04); }
-.bg-gradient-red { background: linear-gradient(135deg, #ef4444, #dc2626); }
-.bg-gradient-pink { background: linear-gradient(135deg, #ec4899, #db2777); }
-.bg-gradient-indigo { background: linear-gradient(135deg, #6366f1, #4f46e5); }
-.bg-gradient-teal { background: linear-gradient(135deg, #14b8a6, #0d9488); }
-.bg-gradient-cyan { background: linear-gradient(135deg, #06b6d4, #0891b2); }
-.bg-gradient-dark { background: linear-gradient(135deg, #374151, #1f2937); }
+
+.bg-gradient-purple {
+    background: linear-gradient(135deg, #8b5cf6, #a855f7);
+}
+
+.bg-gradient-blue {
+    background: linear-gradient(135deg, #3b82f6, #6366f1);
+}
+
+.bg-gradient-green {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.bg-gradient-orange {
+    background: linear-gradient(135deg, #f97316, #ea580c);
+}
+
+.bg-gradient-yellow {
+    background: linear-gradient(135deg, #eab308, #ca8a04);
+}
+
+.bg-gradient-red {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.bg-gradient-pink {
+    background: linear-gradient(135deg, #ec4899, #db2777);
+}
+
+.bg-gradient-indigo {
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+}
+
+.bg-gradient-teal {
+    background: linear-gradient(135deg, #14b8a6, #0d9488);
+}
+
+.bg-gradient-cyan {
+    background: linear-gradient(135deg, #06b6d4, #0891b2);
+}
+
+.bg-gradient-dark {
+    background: linear-gradient(135deg, #374151, #1f2937);
+}
+
 
 /* Skills Section */
+
 .skill-card {
     transition: all 0.3s ease;
 }
@@ -368,7 +496,9 @@ body {
     transition: width 1s ease-in-out;
 }
 
+
 /* Projects Section */
+
 .project-card {
     overflow: hidden;
     transition: all 0.3s ease;
@@ -392,7 +522,9 @@ body {
     border: 1px solid rgba(139, 92, 246, 0.3);
 }
 
+
 /* Certificates Section */
+
 .certification-card {
     transition: all 0.3s ease;
     height: 100%;
@@ -402,7 +534,9 @@ body {
     transform: translateY(-5px);
 }
 
+
 /* Contact Section */
+
 .contact-item {
     padding: 1rem 0;
     border-bottom: 1px solid rgba(139, 92, 246, 0.1);
@@ -435,39 +569,37 @@ body {
     font-weight: 500;
 }
 
+
 /* Footer */
+
 .border-purple {
     border-color: rgba(139, 92, 246, 0.2) !important;
 }
 
+
 /* Responsive Design */
+
 @media (max-width: 768px) {
     .hero-section {
         padding: 2rem 0;
     }
-    
     .display-3 {
         font-size: 2.5rem;
     }
-    
     .profile-image {
         width: 120px;
         height: 120px;
     }
-    
     .hero-buttons {
         flex-direction: column;
         gap: 1rem;
     }
-    
     .hero-buttons .btn {
         width: 100%;
     }
-    
     .social-links {
         gap: 0.5rem;
     }
-    
     .social-link {
         width: 45px;
         height: 45px;
@@ -479,21 +611,20 @@ body {
     .display-3 {
         font-size: 2rem;
     }
-    
     .display-5 {
         font-size: 1.75rem;
     }
-    
     .lead {
         font-size: 1rem;
     }
-    
     .glass-card {
         margin-bottom: 1rem;
     }
 }
 
+
 /* Animation Classes */
+
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
@@ -505,7 +636,9 @@ body {
     transform: translateY(0);
 }
 
+
 /* Loading Animation */
+
 .loading {
     display: inline-block;
     width: 20px;
@@ -517,10 +650,14 @@ body {
 }
 
 @keyframes spin {
-    to { transform: rotate(360deg); }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
+
 /* Success Message */
+
 .alert-success {
     background: rgba(16, 185, 129, 0.1);
     border: 1px solid rgba(16, 185, 129, 0.3);
